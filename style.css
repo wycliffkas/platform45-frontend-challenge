@@ -1,0 +1,385 @@
+body {
+  font-family: Arial;
+  font-size: 40px;
+  color: #383838;
+  background-color: #ececec;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: left;
+  margin: 2%;
+  width: 95%;
+  min-height: 620px;
+  border-radius: 42.5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px #f5f8f9;
+}
+
+.mainDisplay {
+  border-radius: 42.5px 0 0 42.5px;
+  width: 40%;
+  height: 90vh;
+  min-height: 620px;
+  background-color: #ffd500;
+  z-index: 3;
+}
+
+.profileImage {
+  margin: 1.6em auto 1em;
+  width: 6em;
+  height: 6em;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+h1 {
+  margin: auto;
+  font-size: 24px;
+}
+
+h3 {
+  margin: 2em 3em;
+  font-size: 0.5em;
+  line-height: 1.53;
+  font-weight: normal;
+}
+
+.mainDisplay__toggleButton {
+  margin: 0 auto;
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+}
+
+.profileImage:hover,
+.mainDisplay__toggleButton:hover {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+  -moz-transition: opacity 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out;
+}
+
+.slideContent {
+  z-index: 1;
+  position: absolute;
+  left: 15%;
+  width: 0%;
+  height: 90vh;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 42.5px;
+  background-color: #ff9200;
+  transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+}
+/* shows the slide */
+.showSlide {
+  width: 82%;
+}
+/*style for slide heading */
+h2 {
+  width: 40%;
+  margin: 5% 40%;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+  color: #383838;
+}
+
+.slideContent__text {
+  width: 50%;
+  margin-left: 40%;
+  font-size: 0.5em;
+  line-height: 1.53;
+  text-align: left;
+  color: #383838;
+}
+
+.dispalyButtonRotate {
+  transform: rotate(180deg);
+}
+
+.formDisplay {
+  padding: 0.2em;
+  font-size: 0.35em;
+  font-weight: normal;
+  text-align: left;
+  color: #373d40;
+  vertical-align: middle;
+  min-height: 620px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0.1em 0.5em;
+  padding: 1.5em;
+  width: 100%;
+}
+
+form label {
+  margin: auto 0.7em;
+}
+
+.requiredIndicator::before {
+  content: "";
+  position: relative;
+  top: -0.9em;
+  left: -0.5em;
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background: #373d40;
+}
+
+form label.requiredIndicator {
+  margin: auto 0;
+}
+
+input[type="email"]:invalid {
+  box-shadow: none;
+}
+
+.hideRequired {
+  margin: 0;
+  font-size: 0.8em;
+  text-align: right;
+  color: transparent;
+}
+
+.required {
+  color: #ff9200;
+}
+
+.ErrorRequired::before {
+  background: #ff9200;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  font-family: HelveticaNeue;
+  font-weight: 500;
+  color: #373d40;
+  background-color: rgba(245, 248, 249, 0.3);
+  width: 100%;
+  padding: 1.4em 0.6em;
+  margin: 0.6em;
+  border: solid 1px #cad7dd;
+  border-radius: 5.3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+input:focus {
+  border: 1px solid #ff9200 !important;
+}
+
+input:focus {
+  outline-offset: 0px !important;
+  outline: none !important;
+}
+
+input#dateInput {
+  color: #b1bfcd;
+  background: url(img/Calander.svg) no-repeat 98%;
+}
+
+form input.error {
+  border: 1px solid #ff9200;
+  color: #ff9200;
+}
+
+.formDisplay--radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.Male {
+  background: url(img/Male.svg);
+}
+.Female {
+  background: url(img/Female.svg);
+}
+.Classic {
+  background: url(img/Card.svg);
+}
+.Silver {
+  background: url(img/Card.svg);
+}
+.Gold {
+  background: url(img/Card.svg);
+}
+
+span {
+  display: inline-block;
+  padding: 1em 0;
+}
+
+label {
+  vertical-align: middle;
+}
+
+.gender,
+.formDisplay--membership {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1.2px solid transparent;
+  background-color: #f5f8f9;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+.Male:hover,
+.Female:hover,
+.Classic:hover,
+.Silver:hover,
+.Gold:hover {
+  border: 1.2px solid #b3c1ce;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+.formDisplay--radio input:checked + .Male:hover,
+.formDisplay--radio input:checked + .Female:hover,
+.formDisplay--radio input:checked + .Classic:hover,
+.formDisplay--radio input:checked + .Silver:hover,
+.formDisplay--radio input:checked + .Gold:hover {
+  border: 1.2px solid #f5f8f9;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+.formDisplay--radio input:checked + .Male {
+  background: url(img/Male-hover.svg);
+}
+.formDisplay--radio input:checked + .Female {
+  background: url(img/Female-hover.svg);
+}
+.formDisplay--radio input:checked + .Classic {
+  background: url(img/Card-hover.svg);
+}
+.formDisplay--radio input:checked + .Silver {
+  background: url(img/Card-hover.svg);
+}
+.formDisplay--radio input:checked + .Gold {
+  background: url(img/Card-hover.svg);
+}
+/* add styles if radio button is checked */
+.formDisplay--radio input:checked + .Male,
+.formDisplay--radio input:checked + .Female,
+.formDisplay--radio input:checked + .Classic,
+.formDisplay--radio input:checked + .Silver,
+.formDisplay--radio input:checked + .Gold {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  background-color: #b1bfcd;
+  -webkit-transition: background-color 250ms ease-in;
+  -moz-transition: background-color 250ms ease-in;
+  transition: background-color 250ms ease-in;
+}
+
+.button {
+  margin: 1em 0.2em;
+  width: 13em;
+  height: 3em;
+  border-radius: 5.3px;
+  font-size: 1.3em;
+  border: none;
+}
+.cancelButton {
+  background-color: #cad7dd;
+  color: #373d40;
+}
+.saveButton {
+  background-color: #49c8a8;
+  color: #fff;
+}
+
+.formDisplay__errorText {
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: 0;
+  }
+
+  .container,
+  .mainDisplay,
+  form {
+    display: block;
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .mainDisplay__toggleButton {
+    transform: rotate(90deg);
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    grid-gap: 1.1em 0.5em;
+    padding: 1.4em;
+    width: 90%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .slideContent {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .showSlide {
+    height: auto;
+  }
+
+  .slideContent__heading,
+  .slideContent__text {
+    width: 90%;
+    margin: 5% 5%;
+  }
+  .slideContent__text {
+    padding-bottom: 100%;
+  }
+
+  .dispalyButtonRotate {
+    transform: rotate(-90deg);
+  }
+
+  h2 {
+    width: 100%;
+    text-align: left;
+    margin: 8px 17px;
+  }
+}
